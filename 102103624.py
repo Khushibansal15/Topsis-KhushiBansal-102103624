@@ -101,11 +101,7 @@ def topsis(inputFileName, Weights, Impacts, resultFileName):
     print(f"Saving to {resultFileName}")
     inputFileName.to_csv(resultFileName, index=False)#final result
 
-def is_numeric(n):
-    for i in range(0, len(n)-1):
-        if not isinstance(n[i], numbers.Real):
-            return False
-    return True
+
 
 def checkInputs(inputFileName, Weights, Impacts, resultFileName):
     if not inputFileName.endswith('.csv'):
